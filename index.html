@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharifer</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="navigation">
+        <a href="#" class="logo-link">
+            <img src="img/logo.jpg" alt="Логотип"> | Pharifer
+        </a>
+        <button class="menu-toggle" aria-label="Меню">
+            <span></span>
+            <span></span>   
+            <span></span>
+        </button>
+        <ul class="nav-list">
+            <li class="nav-item"><a href="android.html" class="nav-itemlink">Android</a></li>
+            <li class="nav-item"><a href="ios.html" class="nav-itemlink">iOS</a></li>
+            <li class="nav-item"><a href="winmac.html" class="nav-itemlink">Windows | macOS</a></li>
+        </ul>
+    </header>
+
+    <section class="hello-block">
+        <div class="hello-text">
+            <h1 class="main_title">Добро пожаловать на сайт VPN Pharifer!</h1>
+            <h3 class="subMainText">Этот сайт необходим для получения инструкций по использованию VPN</h3>
+
+            <a href="https://t.me/Pharifer_bot" target="_blank" class="tg-link-button">Открыть чат с ботом</a>
+        </div>
+        <div class="hello-img">
+            <img src="img/fon.jpg" alt="Фоновое изображение">
+        </div>
+    </section>
+
+    <div class="video-info">
+        <div class="video-left">
+            <h2 class="video-title">Где также можно найти нашего бота</h2>
+            <div class="video-responsive">
+              <video controls class="video-element">
+                <!-- Источники с разными разрешениями -->
+                <source src="video/videoWEB.mp4" type="video/mp4" media="(min-width: 1024px)">
+                <source src="video/videoWEB2.mp4" type="video/mp4" media="(min-width: 768px)">
+                <source src="video/videoANDROID.mp4" type="video/mp4">
+                <!-- Fallback текст -->
+                Ваш браузер не поддерживает HTML5 видео.
+              </video>
+            </div>
+          </div>
+    
+        <div class="video-right">
+            <h3 class="video-subtitle">Чем полезен бот?</h3>
+            <p class="video-text">
+                С помощью данного бота ты всегда сможешь оставаться в курсе статуса своей подписки и получать важную информацию всего в пару кликов.
+            </p>
+            <p class="video-text">
+                Бот предоставляет удобный доступ к данным о том, сколько дней осталось до окончания подписки — это позволяет тебе не упустить момент и продлить её вовремя.
+            </p>
+            <p class="video-text">
+                Также ты можешь запросить свой конфиг, получить инструкции по настройке и продлить подписку прямо внутри бота — быстро и удобно.
+            </p>
+            <p class="video-text">
+                В будущем планируется добавление новых функций, улучшение интерфейса и расширение возможностей, чтобы сделать сервис ещё комфортнее.
+            </p>
+            <p class="video-text">
+                Этот бот создан для твоего удобства — чтобы ты всегда был на связи, знал свой статус и мог управлять подпиской тогда, когда это действительно нужно.
+            </p>
+        </div>
+    </div>      
+
+    <section class="ref-program" aria-labelledby="ref-program-heading">
+        <div class="container">
+            <h2 id="ref-program-heading" class="ref-program-title">Реферальная программа</h2>
+            
+            <div class="ref-content">
+                <div class="ref-text">
+                    <h3 class="ref-sub-title"><span class="accent">Акция "Пригласи друга"</span> — получайте VPN бесплатно!</h3>
+                    
+                    <p class="intro-text">Хотите пользоваться VPN бесплатно? Это просто!</p>
+                    
+                    <div class="conditions">
+                        <h4 class="conditions-title">Условия акции:</h4>
+                        <ul class="ref-list">
+                            <li class="ref-list-item">За каждых 2 приглашённых друзей, активировавших VPN, вы получаете 1 месяц бесплатного использования</li>
+                            <li class="ref-list-item">Нет ограничений — чем больше друзей приглашаете, тем больше бесплатных месяцев получаете</li>
+                            <li class="ref-list-item">Акция бессрочная — участвовать можно в любое время</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="notice" role="note">
+                        <p class="notice-text">
+                            <strong>Важно!</strong> Для учёта приглашения необходимо написать 
+                            <a href="https://t.me/tohidka_b" target="_blank" rel="noopener noreferrer" class="telegram-link">в Telegram</a>. 
+                            Без этого бонусы могут не начислиться.
+                        </p>
+                    </div>
+                </div>
+                
+                <figure class="ref-image">
+                    <img src="img/RefFON.jpg" alt="Иллюстрация реферальной программы" width="600" height="400" loading="lazy">
+                </figure>
+            </div>
+        </div>
+    </section>
+      
+    <script>
+        // Мобильное меню
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-list').classList.toggle('active');
+            this.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

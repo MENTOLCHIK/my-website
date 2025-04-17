@@ -1,0 +1,171 @@
+/* Сброс и базовые стили */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    color: #fff;
+}
+
+/* Навигация */
+.navigation {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: #0c1040;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Лого */
+.logo-link {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: bold;
+    z-index: 1001;
+}
+
+.logo-link img {
+    height: 60px;
+    margin-right: 10px;
+    border-radius: 100%;
+}
+
+/* Кнопка меню для мобильных */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001;
+}
+
+.menu-toggle span {
+    width: 100%;
+    height: 3px;
+    background: white;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.menu-toggle.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+/* Меню */
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-itemlink {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-itemlink:hover {
+    background-color: #1e255c;
+    color: #4ade80;
+}
+
+/* Блок приветствия */
+.app-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 5%;
+    text-align: left;
+    gap: 40px;
+    width: 100%;
+    min-height: calc(100vh - 80px);
+    background-color: #1a1e60;
+    flex-wrap: wrap;
+}
+
+.app-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.app-main-title {
+    font-size: clamp(1.8rem, 5vw, 3rem);
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    width: 90%;
+}
+
+.app-subMainText {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    color: #d1d5db;
+    margin-bottom: 40px;
+    max-width: 90%;
+}
+
+.hiddify-link {
+    text-decoration: none;
+    color: #29b6f6;
+}
+
+.app-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    min-width: 280px;
+}
+
+.app-img img {
+    max-width: 100%;
+    border-top-left-radius: 30%;
+    border-top-right-radius: 30%;
+    border-bottom-left-radius: 30%;
+    border-bottom-right-radius: 30%;
+    height: auto;
+    object-fit: contain;
+    max-height: 500px;
+    box-shadow: 1px 3px 20px #29b6f6;
+}
+
+.tg-link-button {
+    background-color: #0c1040;
+    margin-top: 25px;
+    display: inline-block;
+    padding: 33px 110px 33px 30px;
+    border-radius: 15px;
+    text-decoration: none;
+    color: #f9f6f2;
+    transition: .3s;
+    border: 1px solid #0c1040;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.tg-link-button:hover {
+    background-color: #1e255c;
+    color: #4ade80;
+    transition: .3s;
+    border: 1px solid #fff;
+}
