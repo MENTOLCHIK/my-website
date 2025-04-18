@@ -281,6 +281,8 @@ body {
     align-items: center;
     justify-content: center;
     border-left: 4px solid #1a1e60;
+    word-break: break-all; /* Добавляем перенос длинных слов */
+    overflow-wrap: break-word; /* Альтернативное свойство для переноса */
 }
 
 /* Кнопки навигации (общие для всех галерей) */
@@ -398,6 +400,11 @@ body {
     .navigation {
         padding: 15px 5%;
     }
+
+    .winOLD {
+        font-size: 14px;
+        padding: 20px;
+    }
     
     .app-block {
         flex-direction: column;
@@ -428,6 +435,24 @@ body {
 @media (max-width: 768px) {
     .menu-toggle {
         display: flex;
+    }
+
+    .app-img img {
+        box-shadow: none; /* Убираем тень */
+    }
+
+    .app-block {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .app-text, .app-img {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .app-main-title {
+        font-size: 1.8rem;
     }
     
     .nav-list {
@@ -498,6 +523,7 @@ body {
     
     .app-img img {
         max-height: 300px;
+        box-shadow: none; /* Убираем тень */
     }
     
     .instruction {
@@ -515,6 +541,15 @@ body {
     
     .instruct-text {
         font-size: 16px;
+    }
+
+    .winOLD {
+        font-size: 12px;
+        padding: 15px;
+        width: 90%;
+        text-align: left; /* Выравнивание по левому краю для лучшей читаемости */
+        word-break: break-word; /* Улучшенный перенос слов */
+        white-space: pre-wrap; /* Сохраняет пробелы, но переносит текст */
     }
     
     .nav-button {
@@ -535,7 +570,7 @@ body {
     }
     
     .winOLD {
-        font-size: 12px;
-        padding: 15px;
+        font-size: 10px;
+        padding: 10px;
     }
 }
