@@ -8,6 +8,20 @@
 </head>
 <body>
     <script src="js/gallery.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navList = document.querySelector('.nav-list');
+    
+            menuToggle.addEventListener('click', function () {
+                menuToggle.classList.toggle('active');
+                navList.classList.toggle('active');
+            });
+        });
+    </script>
+    
+    
     <header class="navigation">
         <a href="#" class="logo-link">
             <img src="img/logo.jpg" alt="Логотип"> | Pharifer
@@ -55,7 +69,7 @@
         <div class="gallery-indicators" id="oldIndicators"></div>
 
         <h2 class="instruct-title">
-            Вот инструкция по настраиванию нового приложения! <i>( показано на Windows, но на macOS нужно проделать те же действия )</i>
+            Вот инструкция по настраиванию приложения для новых пользователей! <i>( показано на Windows, но на macOS нужно проделать те же действия )</i>
         </h2>
 
         <div class="gallery-container">
