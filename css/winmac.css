@@ -1,4 +1,3 @@
-/* Сброс и базовые стили */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
@@ -272,17 +271,20 @@ body {
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     font-family: monospace;
-    font-size: 16px;
+    font-size: 15px;
     color: #333;
-    text-align: center;
+    text-align: left; /* Чтобы текст не был по центру */
     margin: 0 auto;
     flex-shrink: 0;
     display: flex;
-    align-items: center;
+    overflow-wrap: anywhere;
+    flex-direction: column; /* если будет больше вложенного контента */
+    align-items: flex-start;
     justify-content: center;
+    white-space: normal;         /* <<< заменяем pre-wrap */
+    word-break: break-word;      /* <<< перенос длинных слов */
+    overflow-wrap: break-word;
     border-left: 4px solid #1a1e60;
-    word-break: break-all; /* Добавляем перенос длинных слов */
-    overflow-wrap: break-word; /* Альтернативное свойство для переноса */
 }
 
 /* Кнопки навигации (общие для всех галерей) */
@@ -384,193 +386,107 @@ body {
     width: 100%;
 }
 
-/* Медиа-запросы для адаптации под разные устройства */
-@media (max-width: 1200px) {
-    .app-main-title {
-        font-size: 2rem;
-    }
-    
-    .app-img img {
-        max-height: 400px;
-    }
-}
-
-/* Планшеты и небольшие ноутбуки */
-@media (max-width: 992px) {
+/* === 📱 Мобильные устройства (до 768px) === */
+@media (max-width: 768px) {
     .navigation {
+        flex-direction: column;
+        align-items: flex-start;
         padding: 15px 5%;
     }
 
-    .winOLD {
-        font-size: 14px;
-        padding: 20px;
-    }
-    
-    .app-block {
+    .nav-list {
         flex-direction: column;
-        text-align: center;
-        padding: 60px 5%;
-    }
-    
-    .app-text {
-        margin-bottom: 40px;
-    }
-    
-    .app-main-title, .app-subMainText, .appSubText {
+        gap: 10px;
         width: 100%;
-        text-align: center;
+        display: none;
     }
-    
-    .tg-link-button {
-        margin: 25px auto 0;
-    }
-    
-    .instruct-title {
-        font-size: 28px;
-        padding-top: 60px;
-    }
-}
 
-/* Большие телефоны и маленькие планшеты */
-@media (max-width: 768px) {
+    .nav-list.active {
+        display: flex;
+    }
+
     .menu-toggle {
         display: flex;
     }
 
-    .app-img img {
-        box-shadow: none; /* Убираем тень */
-    }
-
     .app-block {
         flex-direction: column;
-        text-align: center;
-    }
-    
-    .app-text, .app-img {
-        width: 100%;
-        max-width: 100%;
-    }
-    
-    .app-main-title {
-        font-size: 1.8rem;
-    }
-    
-    .nav-list {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 70%;
-        height: 100vh;
-        background-color: #0c1040;
-        flex-direction: column;
-        justify-content: center;
         align-items: center;
-        transition: right 0.3s ease;
-        z-index: 1000;
-    }
-    
-    .nav-list.active {
-        right: 0;
-    }
-    
-    .nav-item {
-        margin: 15px 0;
-    }
-    
-    .instruct-title {
-        font-size: 24px;
-        padding-top: 40px;
-    }
-    
-    .instruct-img {
-        width: 90%;
-    }
-    
-    .winOLD {
-        width: 90%;
-        font-size: 14px;
-    }
-    
-    .gallery-container {
-        margin: 20px auto;
-    }
-}
-
-/* Телефоны */
-@media (max-width: 576px) {
-    .logo-link {
-        font-size: 1rem;
-    }
-    
-    .logo-link img {
-        height: 40px;
-    }
-    
-    .app-main-title {
-        font-size: 1.6rem;
-        margin-bottom: 20px;
-    }
-    
-    .app-subMainText, .appSubText {
-        font-size: 1rem;
-    }
-    
-    .tg-link-button {
-        padding: 20px 30px;
-        width: 100%;
-        font-size: 0.9rem;
-    }
-    
-    .app-img img {
-        max-height: 300px;
-        box-shadow: none; /* Убираем тень */
-    }
-    
-    .instruction {
+        text-align: center;
         padding: 20px;
     }
-    
-    .instruct-title {
-        font-size: 20px;
-        padding-top: 30px;
+
+    .app-text,
+    .app-img {
+        width: 100%;
     }
-    
-    .instruct-title i {
-        font-size: 14px;
+
+    .app-img img {
+        box-shadow: none;
     }
-    
-    .instruct-text {
-        font-size: 16px;
+
+    .app-main-title {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
+
+    .app-subMainText,
+    .appSubText {
+        font-size: 1rem;
+        max-width: 100%;
+    }
+
+    .tg-link-button {
+        width: 100%;
+        padding: 20px;
+        font-size: 1rem;
+    }
+
+    .instruct-gallery, .instructToOldVersion {
+        padding: 20px;
+    }
+
+    .instruct-img, .winOLD {
+        width: 100%;
     }
 
     .winOLD {
-        font-size: 12px;
-        padding: 15px;
-        width: 90%;
-        text-align: left; /* Выравнивание по левому краю для лучшей читаемости */
-        word-break: break-word; /* Улучшенный перенос слов */
-        white-space: pre-wrap; /* Сохраняет пробелы, но переносит текст */
-    }
-    
-    .nav-button {
-        width: 40px;
-        height: 40px;
-        font-size: 20px;
+        white-space: pre-wrap; /* <<< это ключевое */
+        word-wrap: break-word;
     }
 }
 
-/* Очень маленькие телефоны */
-@media (max-width: 400px) {
+/* === 💻 Планшеты и ноутбуки (от 769px до 1200px) === */
+@media (min-width: 769px) and (max-width: 1200px) {
     .app-main-title {
-        font-size: 1.4rem;
+        font-size: 2rem;
+    }
+
+    .app-subMainText,
+    .appSubText {
+        font-size: 1.1rem;
     }
     
-    .instruct-title {
-        font-size: 18px;
+    .app-block {
+        gap: 30px;
+        padding: 30px 5%;
     }
-    
+
+    .tg-link-button {
+        font-size: 1rem;
+        padding: 25px 60px 25px 20px;
+    }
+
+    .instruct-gallery, .instructToOldVersion {
+        padding: 20px calc(50% - 45%);
+    }
+
+    .instruct-img, .winOLD {
+        width: 90%;
+    }
+
     .winOLD {
-        font-size: 10px;
-        padding: 10px;
+        white-space: pre-wrap; /* <<< это ключевое */
+        word-wrap: break-word;
     }
 }
