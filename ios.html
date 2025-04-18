@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/ios.css">
-    <link rel="icon" href="img/logo.jpg" type="image/png" />
+    <script src="js/ios.js"></script>
     <title>IOS | Instruction</title>
 </head>
 <body>
@@ -12,13 +12,13 @@
         <a href="index.html" class="logo-link">
             <img src="img/logo.jpg" alt="Логотип"> | Pharifer
         </a>
-        <button class="menu-toggle" aria-label="Меню">
+        <button class="menu-toggle" aria-label="Меню" id="menuToggle">
             <span></span>
             <span></span>
         </button>
-        <ul class="nav-list">
+        <ul class="nav-list" id="navList">
             <li class="nav-item"><a href="#app_block" class="nav-itemlink">Приложение</a></li>
-            <li class="nav-item"><a href="#" class="nav-itemlink">Инструкция</a></li>
+            <li class="nav-item"><a href="#instruction" class="nav-itemlink">Инструкция</a></li>
         </ul>
     </header>
 
@@ -33,6 +33,75 @@
             <img src="img/ios.jpg" alt="Фоновое изображение">
         </div>
     </section>
+
+    <section class="instruction" id="instruction">
+        <h2 class="instruction-title">Инструкция по использованию VPN на iOS</h2>
+    
+        <div class="gallery-section">
+            <div class="instruction-step">
+                <div class="step-number">1</div>
+                <ol class="step-list">
+                    <li>Нажмите на кнопку <strong>Configs</strong></li>
+                </ol>
+                <img src="img/iosInstruct1.png" alt="Шаг 1" class="gallery-img-item">
+            </div>
+    
+            <div class="instruction-step">
+                <div class="step-number">2</div>
+                <ol class="step-list">
+                    <li>Нажмите на кнопку <strong>+</strong> в правом верхнем углу</li>
+                    <li>Скопированный конфиг вставьте через <strong>Import v2ray uri from clipboard</strong></li>
+                    <li>Разрешите вставку</li>
+                </ol>
+                <img src="img/iosInstruct2.png" alt="Шаг 2" class="gallery-img-item">
+            </div>
+    
+            <div class="instruction-step">
+                <div class="step-number">3</div>
+                <ol class="step-list">
+                    <li>Нажмите на <strong>vless</strong> рядом с конфигом</li>
+                    <li>Внизу нажмите <strong>Settings</strong></li>
+                </ol>
+                <img src="img/iosInstruct3.png" alt="Шаг 3" class="gallery-img-item">
+            </div>
+    
+            <div class="instruction-step">
+                <div class="step-number">4</div>
+                <ol class="step-list">
+                    <li>Скопируйте конфигурацию:</li>
+                </ol>
+                <div class="config-box">
+                    <div class="config-link-container">
+                        <code class="config-link">v2box://routes?multi=W3sidHlwZSI6ImRvbWFpblN1ZmZpeCIsImRvbWFpbiI6InJ1IiwiYmVoYXZpb3IiOiJkaXJlY3QifSx7InR5cGUiOiJkb21haW4iLCJkb21haW4iOiJydSIsImJlaGF2aW9yIjoiZGlyZWN0In0seyJ0eXBlIjoicHJvY2VzcyIsInByb2Nlc3MiOiJzdGVhbS5leGUiLCJiZWhhdmlvciI6ImRpcmVjdCJ9LHsidHlwZSI6ImFsbCIsImJlaGF2aW9yIjoicHJveHkifV0=</code>
+                    </div>
+                    <button class="copy-btn">
+                        <span class="copy-icon">📋</span>
+                        <span class="copy-text"></span>
+                    </button>
+                </div>
+                <ol class="step-list" start="2">
+                    <li>Вставьте конфиг в V2Box через кнопку в правом верхнем углу</li>
+                    <li>Включите ползунок для активации правил</li>
+                </ol>
+                <img src="img/iosInstruct4.png" alt="Шаг 4" class="gallery-img-item">
+            </div>
+    
+            <div class="instruction-step">
+                <div class="step-number">5</div>
+                <ol class="step-list">
+                    <li>Перейдите в раздел <strong>Home</strong></li>
+                    <li>Свайп для включения или отключения VPN</li>
+                </ol>
+                <img src="img/iosInstruct5.png" alt="Шаг 5" class="gallery-img-item">
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <h2 class="footer-title">
+            Если у вас возникли вопросы, то не стесняйтесь задавать вопросы <a href="https://t.me/tohidka_b" class="footer-link">ему!</a>
+        </h2>
+    </footer>
 
 </body>
 </html>
