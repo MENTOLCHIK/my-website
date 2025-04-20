@@ -1,6 +1,7 @@
 /* Сброс и базовые стили */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+
 * {
     margin: 0;
     padding: 0;
@@ -8,6 +9,16 @@
     font-family: "Montserrat", sans-serif;
     color: #fff;
 }
+
+:root {
+    --primary-color: #1e255c;
+    --secondary-color: #3a4b8a;
+    --accent-color: #05517e;
+    --light-color: #363b5f;
+    --dark-color: #212529;
+    --text-color: #333;
+    --text-light: #f8f9fa;
+  }
 
 /* Навигация */
 .navigation {
@@ -169,3 +180,437 @@
     transition: .3s;
     border: 1px solid #fff;
 }
+  
+  /* Стили карусели */
+  .carousel {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(30, 37, 92, 0.15);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .carousel-title {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 0.5rem;
+  }
+  
+  .carousel-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: var(--accent-color);
+  }
+  
+  /* Стили слайдов */
+  .slides {
+    position: relative;
+    min-height: 400px;
+    overflow: hidden;
+  }
+  
+  .slide {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .slide.active {
+    opacity: 1;
+    position: relative;
+  }
+  
+  .instruct-left {
+    flex: 1;
+    padding: 1.5rem;
+    background-color: var(--light-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+  
+  .instruct-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #fff;
+  }
+  
+  .instruct-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .photo-container {
+    max-width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(30, 37, 92, 0.2);
+  }
+  
+  .photo-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* Навигационные кнопки */
+  .nav-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+  
+  .nav {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease, visibility 0.3s, opacity 0.3s;
+    box-shadow: 0 4px 8px rgba(30, 37, 92, 0.2);
+  }
+
+  .nav.hidden {
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0.8);
+    pointer-events: none;
+  }
+  
+  .nav:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(30, 37, 92, 0.3);
+  }
+  
+  .nav:active {
+    transform: translateY(0);
+  }
+  
+  /* Скрытые элементы для доступности */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+
+  .footer {
+    background: linear-gradient(135deg, #1e255c 0%, #303b7a 100%);
+    padding: 3rem 2rem;
+    text-align: center;
+    border-radius: 18px;
+    margin: 3rem auto;
+    width: 100%;
+    box-shadow: 0 10px 30px rgba(30, 37, 92, 0.2);
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+    animation: rotate 15s linear infinite;
+    z-index: 0;
+}
+
+.footer-title {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    line-height: 1.5;
+}
+
+.footer-link {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+    transition: all 0.3s ease;
+    background: linear-gradient(90deg, #2575fc 0%, #5688dd 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 0 0.2rem;
+}
+
+.footer-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #2575fc 0%, #1b4ca1 100%);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+.footer-link:hover {
+    transform: translateY(-2px);
+}
+
+.footer-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* Анимация фона */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Эффект "пульсации" для призыва к действию */
+@keyframes pulse {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.footer-link {
+    animation: pulse 4s ease infinite;
+    background-size: 200% 200%;
+}
+
+/* Медиа-запросы для адаптивности */
+
+/* Для экранов до 1200px */
+@media (max-width: 1200px) {
+    .carousel {
+      max-width: 800px;
+    }
+  }
+  
+  /* Для экранов до 992px (планшеты) */
+  @media (max-width: 992px) {
+    .navigation {
+      padding: 15px 5%;
+    }
+
+    .logo-link img {
+      height: 50px;
+    }
+
+    .app-img img {
+        border-radius: 45%;
+        box-shadow: none;
+    }
+    
+    .app-block {
+      padding: 30px 5%;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .app-text {
+        margin-top: 80px;
+    }
+    
+    .app-text, .app-main-title, .app-subMainText {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .carousel {
+      max-width: 700px;
+      padding: 1rem;
+    }
+    
+    .slide {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    
+    .instruct-left, .instruct-right {
+      flex: none;
+      width: 100%;
+    }
+  }
+  
+  /* Для экранов до 768px */
+  @media (max-width: 768px) {
+    .navigation {
+      padding: 10px 5%;
+    }
+    
+    .menu-toggle {
+      display: flex;
+    }
+    
+    .nav-list {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 70%;
+      height: 100vh;
+      background-color: #0c1040;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: right 0.3s ease;
+      padding-top: 80px;
+    }
+    
+    .nav-list.active {
+      right: 0;
+    }
+    
+    .app-main-title {
+      font-size: 2rem;
+      width: 100%;
+    }
+    
+    .app-subMainText {
+      font-size: 1rem;
+      max-width: 100%;
+    }
+    
+    .carousel {
+      max-width: 90%;
+      margin: 1.5rem auto;
+    }
+    
+    .tg-link-button {
+      padding: 25px 80px 25px 25px;
+      font-size: 0.9rem;
+    }
+    
+    .footer {
+      padding: 2rem 1rem;
+      margin: 2rem auto;
+    }
+    
+    .footer-title {
+      font-size: 1.2rem;
+    }
+  }
+  
+  /* Для экранов до 576px (мобильные) */
+  @media (max-width: 576px) {
+    .logo-link img {
+      height: 40px;
+    }
+    
+    .app-block {
+      padding: 20px 5%;
+    }
+    
+    .app-main-title {
+      font-size: 1.8rem;
+    }
+    
+    .app-subMainText {
+      font-size: 0.9rem;
+    }
+    
+    .carousel-title {
+      font-size: 1.5rem;
+    }
+    
+    .instruct-text {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    
+    .nav {
+      width: 40px;
+      height: 40px;
+      font-size: 1.2rem;
+    }
+    
+    .tg-link-button {
+      padding: 20px 60px 20px 20px;
+      font-size: 0.8rem;
+    }
+    
+    .footer {
+      padding: 1.5rem 1rem;
+      margin: 1.5rem auto;
+      border-radius: 12px;
+    }
+    
+    .footer-title {
+      font-size: 1.1rem;
+    }
+  }
+  
+  /* Для очень маленьких экранов до 400px */
+  @media (max-width: 400px) {
+    .nav-list {
+      width: 85%;
+    }
+    
+    .app-img img {
+      max-height: 300px;
+    }
+    
+    .tg-link-button {
+      padding: 15px 40px 15px 15px;
+      font-size: 0.75rem;
+    }
+    
+    .carousel {
+      padding: 0.8rem;
+    }
+    
+    .instruct-left {
+      padding: 1rem;
+    }
+  }
