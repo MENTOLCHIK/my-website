@@ -16,6 +16,112 @@ body {
     overflow-x: hidden;
 }
 
+.telegram-chat {
+    position: fixed;
+    display: none;
+    bottom: 90px;
+    right: 30px;
+    width: 300px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    font-family: 'Segoe UI', sans-serif;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    z-index: 1000;
+  }
+
+.telegram-chat.visible {
+    opacity: 1;
+    transform: translateY(0);
+    display: block;
+}
+
+.chat-trigger {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: #0088cc;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 136, 204, 0.3);
+    z-index: 999;
+    transition: all 0.3s;
+  }
+  
+.chat-trigger:hover {
+    background: #0077b3;
+    transform: scale(1.1);
+}
+
+/* Шапка чата */
+.chat-header {
+    background: linear-gradient(135deg, #0088cc, #00a2e8);
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-title {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.chat-close {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Тело чата */
+.chat-body {
+    padding: 15px;
+    background: #f9f9f9;
+    min-height: 80px;
+}
+
+.bot-message {
+    color: #333;
+    line-height: 1.4;
+}
+
+/* Футер чата */
+.chat-footer {
+    padding: 15px;
+    text-align: center;
+}
+
+.chat-button {
+    display: inline-block;
+    background: #0088cc;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.chat-button:hover {
+    background: #0077b3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.chat-hint {
+    font-size: 12px;
+    color: #777;
+    margin-top: 10px;
+}
+
 /* Навигация */
 .navigation {
     position: sticky;
@@ -389,6 +495,112 @@ video:fullscreen {
 .telegram-link:hover {
     color: #b3e5fc;
     text-decoration: underline;
+}
+
+.price {
+    background-color: white;
+    padding: 40px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.price-title {
+    text-align: center;
+    color: #2c3e50;
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.price-title:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, #3498db, #4240c4);
+}
+
+.price-blocks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.price-block {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    padding: 25px;
+    width: 280px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.price-block:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.price-text {
+    color: #2c3e50;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: center;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed #ddd;
+    width: 100%;
+}
+
+.price-button {
+    background: linear-gradient(135deg, #3498db, #2d519e);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    margin: 8px 0;
+    width: 100%;
+    text-align: center;
+    transition: all 0.3s;
+    box-shadow: 0 4px 10px rgba(52, 152, 219, 0.3);
+}
+
+.price-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 7px 15px rgba(52, 152, 219, 0.4);
+}
+
+.price-button:active {
+    transform: translateY(1px);
+}
+
+.price-img {
+    width: 100%;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .price-blocks {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .price-block {
+        width: 90%;
+    }
 }
 
 /* Медиа-запросы для адаптации */
