@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/android.js"></script>
     <link rel="stylesheet" href="css/android.css">
-    <link rel="icon" href="img/logo.jpg" type="image/png" />
     <title>Android | Instruction</title>
 </head>
 <body>
     <header class="navigation">
-        <a href="index.html" class="logo-link">
+        <a href="#" class="logo-link">
             <img src="img/logo.jpg" alt="Логотип"> | Pharifer
         </a>
         <button class="menu-toggle" aria-label="Меню">
@@ -18,7 +18,7 @@
         </button>
         <ul class="nav-list">
             <li class="nav-item"><a href="#app_block" class="nav-itemlink">Приложение</a></li>
-            <li class="nav-item"><a href="#" class="nav-itemlink">Инструкция</a></li>
+            <li class="nav-item"><a href="#instruction" class="nav-itemlink">Инструкция</a></li>
         </ul>
     </header>
 
@@ -33,6 +33,70 @@
             <img src="img/unnamed.webp" alt="Фоновое изображение">
         </div>
     </section>
+
+    <section class="carousel" role="region" id="instruction">
+      <h2 class="carousel-title">
+          Вот инструкция по использованию VPN на Android
+      </h2>
+
+        <div class="slides" id="slides">
+          
+          <!-- Slide 1 -->
+          <article class="slide">
+            <figure class="instruct-right">
+                <div class="photo-container">
+                    <img src="img/AndroidInstruct.png" alt="">
+                </div>
+              <figcaption class="sr-only">Добавление профиля</figcaption>
+            </figure>
+            <aside class="instruct-left">
+              <p class="instruct-text">1. Нажмите на кнопку добавления профиля</p>
+            </aside>
+          </article>
+      
+          <!-- Slide 2 -->
+          <article class="slide">
+            <figure class="instruct-right">
+                <div class="photo-container">
+                    <img src="img/AndroidInstruct2.png" alt="Получение конфига и добавление">
+                </div>
+              <figcaption class="sr-only">Получение конфигурации</figcaption>
+            </figure>
+            <aside class="instruct-left">
+              <p class="instruct-text">
+                1. Получите через бота конфиг (vless ссылку)<br><br>
+                2. Нажмите кнопку «Добавить из буфера обмена»
+              </p>
+            </aside>
+          </article>
+      
+          <!-- Slide 3 -->
+          <article class="slide">
+            <figure class="instruct-right">
+                <div class="photo-container">
+                    <img src="img/AndroidInstruct3.png" alt="Включение или отключение VPN">
+                </div>
+              <figcaption class="sr-only">Включение VPN</figcaption>
+            </figure>
+            <aside class="instruct-left">
+              <p class="instruct-text">1. Нажав на кнопку, включаете или отключаете VPN</p>
+            </aside>
+          </article>
+      
+        </div>
+      
+        <!-- Navigation buttons -->
+        <nav class="nav-buttons" aria-label="Навигация по слайдам">
+          <button class="nav left" id="prev" aria-label="Предыдущий слайд">&#10094;</button>
+          <button class="nav right" id="next" aria-label="Следующий слайд">&#10095;</button>
+        </nav>
+    </section>
+    
+    <footer class="footer">
+      <h2 class="footer-title">
+          Если у вас возникли вопросы, то не стесняйтесь задавать их <a href="https://t.me/tohidka_b" class="footer-link">ему!</a>
+      </h2>
+    </footer>
 
 </body>
 </html>
