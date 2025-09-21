@@ -636,6 +636,11 @@ body {
     text-align: center;
 }
 
+.price-savings.highlight {
+    font-weight: bold;
+    color: #d32f2f;
+}
+
 .price-button {
     background: linear-gradient(135deg, #3498db, #2d519e);
     color: white;
@@ -798,6 +803,7 @@ body {
         font-size: 1rem;
     }
 }
+
 
 
 
