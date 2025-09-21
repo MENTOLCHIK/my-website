@@ -622,6 +622,25 @@ body {
     width: 100%;
 }
 
+.price-amount {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.price-savings {
+    font-size: 1rem;
+    color: #28a745;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.price-savings.highlight {
+    font-weight: bold;
+    color: #d32f2f;
+}
+
 .price-button {
     background: linear-gradient(135deg, #3498db, #2d519e);
     color: white;
@@ -784,3 +803,4 @@ body {
         font-size: 1rem;
     }
 }
+
