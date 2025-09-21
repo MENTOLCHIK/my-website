@@ -624,7 +624,7 @@ body {
 
 .price-amount {
     font-size: 1.1rem;
-    color: #555;
+    color: #555555;
     margin-bottom: 10px;
     text-align: center;
 }
@@ -798,6 +798,7 @@ body {
         font-size: 1rem;
     }
 }
+
 
 
 
