@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Инструкции по настройке | VPN Pharifer</title>
+
+  <!-- Preload critical resources -->
+  <link rel="preload" href="css/style.css" as="style">
+  <link rel="preload" href="css/instructions.css" as="style">
+  <link rel="preload" href="js/script.js" as="script">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="img/favicon.png"/>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Основные стили -->
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/instructions.css"/>
+
+  <!-- SEO -->
+  <meta name="description" content="Пошаговые инструкции по настройке VPN Pharifer на Android, iOS, macOS, Windows и в Telegram."/>
+  <meta name="keywords" content="VPN, настройка, инструкции, Android, iOS, Windows, macOS, Telegram"/>
+</head>
+<body>
+
+  <!-- Прогресс-бар -->
+  <div class="progress-bar" aria-hidden="true"></div>
+
+  <!-- Анимированный фон -->
+  <div class="background-animation" aria-hidden="true">
+    <div class="gradient-circle circle-1"></div>
+    <div class="gradient-circle circle-2"></div>
+    <div class="gradient-circle circle-3"></div>
+  </div>
+
+  <!-- Модальное окно для изображений -->
+  <div id="imageModal" class="modal">
+    <span class="modal-close">&times;</span>
+    <img class="modal-content" id="modalImage">
+    <div id="modalCaption"></div>
+  </div>
+
+  <div class="main-container">
+    <header class="header">
+      <div class="logo">
+        <i class="fas fa-shield-alt" aria-hidden="true"></i>
+        <span>VPN Pharifer</span>
+      </div>
+      <nav class="nav" aria-label="Основная навигация">
+        <a href="index.html" class="nav-link">Главная</a>
+      </nav>
+    </header>
+  </div>
+
+  <main class="instructions-container">
+    <header class="instructions-header">
+      <h1>Инструкции по настройке</h1>
+      <p>Выберите вашу платформу и следуйте пошаговой инструкции</p>
+    </header>
+
+    <!-- Вкладки -->
+    <div class="tabs" role="tablist" aria-label="Платформы для настройки">
+      <button class="tab-btn active" data-tab="telegram" role="tab" aria-selected="true" aria-controls="telegram">
+        <i class="fab fa-telegram" aria-hidden="true"></i> Telegram Бот
+      </button>
+      <button class="tab-btn" data-tab="mobile" role="tab" aria-selected="false" aria-controls="mobile">
+        <i class="fas fa-mobile-alt" aria-hidden="true"></i> Мобильные
+      </button>
+      <button class="tab-btn" data-tab="desktop" role="tab" aria-selected="false" aria-controls="desktop">
+        <i class="fas fa-laptop" aria-hidden="true"></i> Десктоп
+      </button>
+      <button class="tab-btn" data-tab="antijam" role="tab" aria-selected="false" aria-controls="antijam">
+        <i class="fas fa-broadcast-tower" aria-hidden="true"></i> АнтиГлушилка
+      </button>
+    </div>
+
+    <!-- === TELEGRAM БОТ === -->
+    <section id="telegram" class="tab-content active" role="tabpanel" aria-labelledby="telegram">
+      <h2>Настройка Telegram-бота</h2>
+
+      <div class="instruction-step">
+        <div class="instruction-caption">1. Запустите бота</div>
+        <img src="img/telegram_1.jpg" alt="Интерфейс Telegram бота с кнопкой запуска" class="instruction-image zoomable" loading="lazy">
+        <p class="instruction-text">
+          Перейдите: <a href="https://t.me/Pharifer_bot" target="_blank" rel="noopener">@Pharifer_bot</a> → <strong>/start</strong> → <strong>Пробная подписка</strong>
+        </p>
+      </div>
+
+      <div class="instruction-step">
+        <div class="instruction-caption">2. Основные команды бота</div>
+        <div class="commands-grid">
+          <div class="command-item">
+            <span class="bot-command">🎁 Пробная подписка</span>
+            <span class="command-desc">— получить пробную подписку</span>
+          </div>
+          <div class="command-item">
+            <span class="bot-command">⚙️ Конфигурация</span>
+            <span class="command-desc">— отправляет конфигурацию</span>
+          </div>
+          <div class="command-item">
+            <span class="bot-command">👤 Информация по подписке</span>
+            <span class="command-desc">— срок действия подписки</span>
+          </div>
+          <div class="command-item">
+            <span class="bot-command">📖 Инструкции</span>
+            <span class="command-desc">— ссылка на этот сайт</span>
+          </div>
+          <div class="command-item">
+            <span class="bot-command">💬 Присоединиться к беседе</span>
+            <span class="command-desc">— чат с пользователями</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- === МОБИЛЬНЫЕ === -->
+    <section id="mobile" class="tab-content" role="tabpanel" aria-labelledby="mobile" hidden>
+      <h2>Настройка на Android и iOS</h2>
+
+      <div class="platform-section">
+        <h3><i class="fab fa-android" aria-hidden="true"></i> | <i class="fab fa-apple" aria-hidden="true"></i> v2RayTun</h3>
+        
+        <div class="instruction-step">
+          <div class="instruction-caption">1. Установите приложение</div>
+          <div class="appLinks-group">
+            <a href="https://play.google.com/store/apps/details?id=com.v2raytun.android&hl=ru" class="appLink appLink--android" target="_blank" rel="noopener">
+              <i class="fab fa-android"></i>
+              v2RayTun для Android
+            </a>
+            <a href="https://apps.apple.com/us/app/v2raytun/id6476628951" class="appLink appLink--ios" target="_blank" rel="noopener">
+              <i class="fab fa-apple"></i>
+              v2RayTun для iOS
+            </a>
+          </div>
+        </div>
+
+        <div class="instruction-step">
+          <div class="instruction-caption">2. Получите конфигурацию</div>
+          <p class="instruction-text">@Pharifer_bot → <code>/start</code> → <strong>🎁 Пробная подписка</strong></p>
+          <img src="img/AndroidIos/androidIos1.jpg" alt="Получение конфигурации из бота" class="instruction-image zoomable" loading="lazy">
+        </div>
+
+        <div class="instruction-step">
+          <div class="instruction-caption">3. Импортируйте конфигурацию</div>
+          <p class="instruction-text"><strong>Нажмите на "+" в правом верхнем углу</strong></p>
+          <img src="img/AndroidIos/androidIos2.jpg" alt="Нажмите на + в правом верхнем углу" class="instruction-image zoomable" loading="lazy">
+        </div>
+
+        <div class="instruction-step">
+          <div class="instruction-caption">4. Импортируйте конфигурацию</div>
+          <p class="instruction-text"><strong>Импорт из буфера обмена</strong></p>
+          <img src="img/AndroidIos/androidIos3.jpg" alt="Импорт из буфера обмена" class="instruction-image zoomable" loading="lazy">
+        </div>
+
+        <div class="instruction-step">
+          <div class="instruction-caption">5. Подключитесь</div>
+          <p class="instruction-text"><strong>Включите VPN</strong> <br>( также советую изменить название конфигурации, нажав на иконку, отмеченную на скрине )</p>
+          <img src="img/AndroidIos/androidIos4.png" alt="Совет по изменению названия" class="instruction-image zoomable" loading="lazy">
+        </div>
+
+        <div class="instruction-step">
+          <div class="instruction-caption">6. Меняете название</div>
+          <p class="instruction-text"><strong>Меняем название и нажимаем на галочку в правом верхнем углу <br>( перед этим нужно отключить впн )</strong></p>
+          <img src="img/AndroidIos/androidIos5.jpg" alt="Как поменять название" class="instruction-image zoomable" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- === ДЕСКТОП === -->
+    <section id="desktop" class="tab-content" role="tabpanel" aria-labelledby="desktop" hidden>
+      <h2>Настройка на Windows и macOS</h2>
+
+      <div class="platform-section">
+        <h3><i class="fab fa-windows" aria-hidden="true"></i> | <i class="fab fa-apple" aria-hidden="true"></i> Clash Verge</h3>
+        
+        <div class="instruction-step">
+          <div class="instruction-caption">1. Скачайте Clash Verge</div>
+          <div class="appLinks-group">
+            <a href="https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v2.2.3/Clash.Verge_2.2.3_x64-setup.exe" class="appLink appLink--windows" target="_blank" rel="noopener">
+              <i class="fab fa-windows"></i>
+              Windows
+            </a>
+            <a href="https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v2.2.3/Clash.Verge_2.2.3_aarch64.dmg" class="appLink appLink--macos" target="_blank" rel="noopener">
+              <i class="fab fa-apple"></i>
+              macOS
+            </a>
+          </div>
+        </div>
+
+        <div class="instruction-step">
+          <div class="instruction-caption">2. Добавьте новый профиль</div>
+          <p class="instruction-text"><strong>Профили → Новый</strong></p>
+          <img src="img/WinMacOS/winmacInstruct1.png" alt="Добавление нового профиля в Clash Verge" class="instruction-image zoomable" loading="lazy">
+        </div>
+
+        <div class="instruction-step">
+          <div class="instruction-caption">3. Настройте тип профиля</div>
+          <p class="instruction-text"><strong>Тип → Local</strong></p>
+          <img src="img/WinMacOS/winmacInstruct2.png" alt="Настройка типа профиля" class="instruction-image zoomable" loading="lazy">
+        </div>
+
+        <div class="instruction-step">
+          <div class="instruction-caption">4. Вставка конфига</div>
+          <p class="instruction-text"><strong>Выберите конфиг, полученный от бота</strong></p>
+          <img src="img/WinMacOS/winmacInstruct3.png" alt="Выбор конфига" class="instruction-image zoomable" loading="lazy">
+        </div>
+
+        <div class="instruction-step">
+          <div class="instruction-caption">5. Настройка приложения</div>
+          <p class="instruction-text"><strong>Настройки → Включите Режим TUN → Включите Системный прокси</strong></p>
+          <img src="img/WinMacOS/winmacInstruct4.png" alt="Включение необходимых настроек" class="instruction-image zoomable" loading="lazy">
+        </div>
+
+        <div class="instruction-step">
+          <div class="instruction-caption">6. Настройка приложения</div>
+          <p class="instruction-text"><strong>Прокси → Выберите раздел правила</strong></p>
+          <img src="img/WinMacOS/winmacInstruct5.png" alt="Выбор раздел правила" class="instruction-image zoomable" loading="lazy">
+        </div>
+
+        <div class="instruction-step">
+          <div class="instruction-caption">7. Выбор сервера</div>
+          <p class="instruction-text"><strong>Раскрываем список серверов → выбираете один из доступных серверов</strong></p>
+          <img src="img/WinMacOS/winmacInstruct6.jpg" alt="Выбор сервера" class="instruction-image zoomable" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- === АНТИГЛУШИЛКА === -->
+    <section id="antijam" class="tab-content" role="tabpanel" aria-labelledby="antijam" hidden>
+      <h2>АнтиГлушилка — обход белых списков</h2>
+      <p class="instruction-text intro-text">
+        Работает <strong>только на Android и iOS</strong>. Автоматически обходит DPI и белые списки.
+      </p>
+
+      <div class="platform-section">
+        <h3><i class="fab fa-android" aria-hidden="true"></i> | <i class="fab fa-apple" aria-hidden="true"></i> Happ</h3>
+        
+        <div class="instruction-step">
+          <div class="instruction-caption">1. Установите приложение</div>
+          <div class="appLinks-group">
+            <a href="https://play.google.com/store/apps/details?id=com.happproxy" class="appLink appLink--android" target="_blank" rel="noopener">
+              <i class="fab fa-android"></i>
+              Happ для Android
+            </a>
+            <a href="https://apps.apple.com/us/app/happ-proxy-utility/id6504287215?l=ru" class="appLink appLink--ios" target="_blank" rel="noopener">
+              <i class="fab fa-apple"></i>
+              Happ Plus для iOS
+            </a>
+          </div>
+        </div>
+
+        <div class="instruction-step">
+          <div class="instruction-caption">2. Добавьте конфигурацию</div>
+          <p class="instruction-text"><strong>Из буфера обмена → Вставьте конфиг, полученный от администратора</strong></p>
+          <img src="img/AntiJam/antiJam_1.png" alt="Добавление конфигурации в Happ" class="instruction-image zoomable" loading="lazy">
+        </div>
+
+        <div class="instruction-step">
+          <div class="instruction-caption">3. Дальнейшее добавление конфигов</div>
+          <p class="instruction-text"><strong>Нажмите на "+" в правом верхнем углу → Вставить из буфера обмена</strong></p>
+          <img src="img/AntiJam/antiJam_2.jpg" alt="Добавление последующих конфигураций в Happ" class="instruction-image zoomable" loading="lazy">
+        </div>
+
+        <div class="instruction-step">
+          <div class="instruction-caption">4. Выберите сервер и подключитесь</div>
+          <p class="instruction-text"><strong>Нажмите на название сервера для выбора и активируйте подключение</strong></p>
+          <img src="img/AntiJam/antiJam_3.png" alt="Выбор сервера и подключение" class="instruction-image zoomable" loading="lazy">
+        </div>
+      </div>
+
+      <div class="notification notification--warning" role="alert">
+        <i class="fas fa-exclamation-triangle" aria-hidden="true"></i>
+        <span>Включать только при активных белых списках! При обычном использовании интернета функция не нужна.</span>
+      </div>
+    </section>
+
+    <nav class="navigation-bottom">
+      <a href="index.html" class="back-btn">
+        <i class="fas fa-arrow-left" aria-hidden="true"></i> Вернуться на главную
+      </a>
+    </nav>
+  </main>
+
+  <!-- Футер -->
+  <footer class="footer">
+    <p>&copy; 2025 VPN Pharifer. Все права защищены.</p>
+  </footer>
+
+  <!-- JS -->
+  <script src="js/script.js"></script>
+</body>
+</html>
